@@ -1,0 +1,1029 @@
+Jasne. Wklej *całość poniżej* do pliku `index.html`. Jest podzielona na wyraźne sekcje, żeby później łatwo było coś znaleźć.
+
+```html
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+<!-- ==================== USTAWIENIA STRONY ==================== -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agnieszka Łukasiewicz | Rzeźba w Dębie</title>
+
+<meta name="description"
+content="Agnieszka Łukasiewicz – rzeźby w drewnie, rysunki i malunki.">
+
+<style>
+
+/* ==================== RESET ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f5eee4;
+    color: #3d2a1c;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ==================== NAWIGACJA ==================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #24160e;
+    box-shadow: 0 3px 15px rgba(0,0,0,.25);
+}
+
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 72px;
+    padding: 10px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #d9ae6c;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo small {
+    display: block;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #d9ae6c;
+}
+
+.menu-btn {
+    display: none;
+    border: 0;
+    background: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* ==================== PRZYCISKI ==================== */
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 7px;
+    background: #9b6736;
+    color: white;
+    border: 0;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.btn:hover {
+    background: #c28a4c;
+    transform: translateY(-2px);
+}
+
+.messenger {
+    background: #1685e5;
+}
+
+.messenger:hover {
+    background: #086bc0;
+}
+
+
+/* ==================== SEKCJE ==================== */
+
+section {
+    padding: 75px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    color: #4b301d;
+    margin-bottom: 45px;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #a66e38;
+    margin: 15px auto;
+}
+
+
+/* ==================== STRONA GŁÓWNA ==================== */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(25,15,9,.90),
+            rgba(25,15,9,.55),
+            rgba(25,15,9,.25)
+        ),
+        url("images/hero.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 50px 25px;
+    color: white;
+}
+
+.hero h1 {
+    max-width: 750px;
+    font-size: clamp(43px, 7vw, 78px);
+    line-height: 1.05;
+    color: #f7ead7;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* ==================== O MNIE ==================== */
+
+.about {
+    background: #e6d4bc;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    margin-bottom: 15px;
+}
+
+.about-photo img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+}/* ==================== GALERIA ==================== */
+
+.gallery-section {
+    background: #302015;
+}
+
+.gallery-section .section-title {
+    color: #f5ead8;
+}
+
+.category {
+    margin-bottom: 70px;
+}
+
+.category-title {
+    color: #e1bd82;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    background: #21140c;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+
+/* ==================== OPINIE ==================== */
+
+.reviews {
+    background: #fffaf3;
+}
+
+.review-intro {
+    text-align: center;
+    max-width: 650px;
+    margin: -25px auto 35px;
+}
+
+.review-form {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,.08);
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cdb99f;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.stars {
+    text-align: center;
+    margin: 15px 0 25px;
+}
+
+.star {
+    color: #ccc;
+    font-size: 38px;
+    cursor: pointer;
+}
+
+.star.active {
+    color: #d8a641;
+}
+
+.review-form .btn {
+    width: 100%;
+}
+
+.review-list {
+    max-width: 800px;
+    margin: 35px auto 0;
+}
+
+.review {
+    background: #f5eee4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.review-stars {
+    color: #d8a641;
+}
+
+
+/* ==================== KONTAKT ==================== */
+
+.contact {
+    background: #2b1c12;
+    color: white;
+    text-align: center;
+}
+
+.contact .section-title {
+    color: white;
+}
+
+.phone {
+    display: block;
+    color: #e0b878;
+    font-size: 25px;
+    margin: 15px 0 25px;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* ==================== FORMULARZ WIADOMOŚCI ==================== */
+
+.message-box {
+    max-width: 700px;
+    margin: 45px auto 0;
+    padding: 30px;
+    background: white;
+    color: #3d2a1c;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.message-box h3 {
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 25px;
+}
+
+.message-box .btn {
+    width: 100%;
+}
+
+
+/* ==================== STOPKA ==================== */
+
+footer {
+    background: #170e09;
+    color: #cdbda9;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+
+/* ==================== TABLET ==================== */
+
+@media (max-width: 850px) {
+
+    nav ul {
+        display: none;
+
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+
+        background: #24160e;
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+        padding: 10px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav li {
+        padding: 12px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ==================== TELEFON ==================== */
+
+@media (max-width: 550px) {
+
+    section {
+        padding: 55px 15px;
+    }
+
+    .hero {
+        min-height: 570px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        display: block;
+    }
+
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }.section-title {
+        font-size: 31px;
+    }
+
+    .about h2 {
+        font-size: 31px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 300px;
+    }
+
+    .contact-buttons {
+        display: block;
+    }
+
+    .contact-buttons .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .message-box,
+    .review-form {
+        padding: 22px 17px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- ==================== NAWIGACJA ==================== -->
+
+<header>
+
+<div class="nav">
+
+<a href="#start" class="logo">
+Agnieszka Łukasiewicz
+<small>RZEŹBA • RYSUNKI • MALUNKI</small>
+</a>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+<nav>
+<ul id="menu">
+
+<li><a href="#o-mnie">O mnie</a></li>
+<li><a href="#rzezby">Rzeźby</a></li>
+<li><a href="#rysunki">Rysunki</a></li>
+<li><a href="#malunki">Malunki</a></li>
+<li><a href="#opinie">Opinie</a></li>
+<li><a href="#kontakt">Kontakt</a></li>
+
+</ul>
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- ==================== STRONA GŁÓWNA ==================== -->
+
+<section class="hero" id="start">
+
+<div class="hero-content">
+
+<h1>Sztuka tworzona z pasją</h1>
+
+<p>
+Rzeźby w drewnie, rysunki i malunki.
+Zapraszam do obejrzenia moich prac.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#rzezby" class="btn">
+Zobacz moje prace
+</a>
+
+<a
+href="https://m.me/AanastI666"
+target="_blank"
+class="btn messenger">
+💬 Napisz na Messengerze
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================== O MNIE ==================== -->
+
+<section class="about" id="o-mnie">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div>
+
+<h2>Agnieszka Łukasiewicz</h2>
+
+<p>
+Tworzę rzeźby w drewnie, rysunki i malunki.
+Każda praca powstaje z pasją, zaangażowaniem
+i dbałością o szczegóły.
+</p>
+
+<p>
+Zapraszam do obejrzenia moich prac.
+Jeżeli masz pytanie lub własny pomysł,
+napisz do mnie.
+</p>
+
+</div>
+
+<div class="about-photo">
+
+<img
+src="images/o-mnie.jpg"
+alt="Agnieszka Łukasiewicz">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================== RZEŹBY ==================== -->
+
+<section class="gallery-section" id="rzezby">
+
+<div class="container">
+
+<h2 class="section-title">Rzeźby</h2>
+
+<div class="gallery">
+
+<div class="gallery-item">
+<img src="images/rzezba1.jpg" alt="Rzeźba w drewnie">
+</div>
+
+<div class="gallery-item">
+<img src="images/rzezba2.jpg" alt="Rzeźba w drewnie">
+</div>
+
+<div class="gallery-item">
+<img src="images/rzezba3.jpg" alt="Rzeźba w drewnie">
+</div>
+
+<div class="gallery-item">
+<img src="images/rzezba4.jpg" alt="Rzeźba w drewnie">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================== RYSUNKI ==================== -->
+
+<section class="gallery-section" id="rysunki">
+
+<div class="container">
+
+<h2 class="section-title">Rysunki</h2>
+
+<div class="gallery">
+
+<div class="gallery-item">
+<img src="images/rysunek1.jpg" alt="Rysunek">
+</div>
+
+<div class="gallery-item">
+<img src="images/rysunek2.jpg" alt="Rysunek">
+</div>
+
+<div class="gallery-item">
+<img src="images/rysunek3.jpg" alt="Rysunek">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================== MALUNKI ==================== -->
+
+<section class="gallery-section" id="malunki">
+
+<div class="container">
+
+<h2 class="section-title">Malunki</h2>
+
+<div class="gallery">
+
+<div class="gallery-item">
+<img src="images/malunek1.jpg" alt="Malunek">
+</div>
+
+<div class="gallery-item">
+<img src="images/malunek2.jpg" alt="Malunek">
+</div>
+
+<div class="gallery-item">
+<img src="images/malunek3.jpg" alt="Malunek">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================== OPINIE ==================== -->
+
+<section class="reviews" id="opinie">
+
+<div class="container">
+
+<h2 class="section-title">Opinie klientów</h2>
+
+<p class="review-intro">
+Możesz zostawić swoją ocenę i krótką opinię.
+</p>
+
+<div class="review-form">
+  <h3>⭐ Dodaj opinię</h3>
+
+<div class="stars">
+
+<span class="star" data-rating="1">★</span>
+<span class="star" data-rating="2">★</span>
+<span class="star" data-rating="3">★</span>
+<span class="star" data-rating="4">★</span>
+<span class="star" data-rating="5">★</span>
+
+</div>
+
+<div class="form-group">
+
+<label>Imię</label>
+
+<input
+type="text"
+id="reviewName"
+placeholder="Twoje imię">
+
+</div>
+
+<div class="form-group">
+
+<label>Opinia</label>
+
+<textarea
+id="reviewText"
+placeholder="Napisz swoją opinię..."></textarea>
+
+</div>
+
+<button class="btn" onclick="addReview()">
+Wyślij opinię
+</button>
+
+</div>
+
+<div class="review-list" id="reviewList"></div>
+
+</div>
+
+</section>
+
+
+<!-- ==================== KONTAKT ==================== -->
+
+<section class="contact" id="kontakt">
+
+<div class="container">
+
+<h2 class="section-title">Kontakt</h2>
+
+<p>
+Masz pytanie albo chcesz zamówić pracę?
+</p>
+
+<a
+href="tel:+48795052820"
+class="phone">
+📞 795 052 820
+</a>
+
+<div class="contact-buttons">
+
+<a
+href="tel:+48795052820"
+class="btn">
+📞 Zadzwoń
+</a>
+
+<a
+href="https://m.me/AanastI666"
+target="_blank"
+class="btn messenger">
+💬 Messenger
+</a>
+
+</div>
+
+
+<!-- ==================== WIADOMOŚĆ E-MAIL ==================== -->
+
+<div class="message-box">
+
+<h3>✉️ Napisz wiadomość</h3>
+
+<form
+action="https://formsubmit.co/lunakicia666@gmail.com"
+method="POST">
+
+<input
+type="hidden"
+name="_subject"
+value="Wiadomość ze strony Agnieszki Łukasiewicz">
+
+<input
+type="hidden"
+name="_captcha"
+value="false">
+
+<div class="form-group">
+
+<label>Imię</label>
+
+<input
+type="text"
+name="Imię"
+placeholder="Twoje imię"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>E-mail</label>
+
+<input
+type="email"
+name="Email"
+placeholder="Twój e-mail"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Wiadomość</label>
+
+<textarea
+name="Wiadomość"
+placeholder="Napisz wiadomość..."
+required></textarea>
+
+</div>
+
+<button type="submit" class="btn">
+📩 Wyślij wiadomość
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================== STOPKA ==================== -->
+
+<footer>
+
+© 2026 Agnieszka Łukasiewicz
+
+<br>
+
+Rzeźba w drewnie • Rysunki • Malunki
+
+</footer>
+
+
+<!-- ==================== JAVASCRIPT ==================== -->
+
+<script>
+
+/* ===== MENU TELEFONICZNE ===== */
+
+function toggleMenu() {
+
+    document
+        .getElementById("menu")
+        .classList.toggle("active");
+
+}
+
+
+/* ===== OCENY GWIAZDKAMI ===== */
+
+let selectedRating = 0;
+
+const stars = document.querySelectorAll(".star");
+
+stars.forEach(function(star) {
+
+    star.addEventListener("click", function() {
+
+        selectedRating =
+            Number(this.dataset.rating);
+
+        stars.forEach(function(s) {
+
+            const rating =
+                Number(s.dataset.rating);
+
+            if (rating <= selectedRating) {
+                s.classList.add("active");
+            } else {
+                s.classList.remove("active");
+            }
+
+        });
+
+    });
+
+});
+
+
+/* ===== DODAWANIE OPINII ===== */
+
+function addReview() {
+
+    const name =
+        document.getElementById("reviewName")
+        .value.trim();
+
+    const text =
+        document.getElementById("reviewText")
+        .value.trim();
+
+    if (!name || !text || selectedRating === 0) {
+
+        alert(
+            "Wpisz imię, opinię i wybierz liczbę gwiazdek."
+        );
+
+        return;
+    }
+
+    const review =
+        document.createElement("div");
+
+    review.className = "review";
+
+    review.innerHTML = `
+
+        <strong>${escapeHTML(name)}</strong>
+
+        <div class="review-stars">
+            ${"★".repeat(selectedRating)}
+            ${"☆".repeat(5 - selectedRating)}
+        </div>
+
+        <p>${escapeHTML(text)}</p>
+
+    `;
+
+    document
+        .getElementById("reviewList")
+        .prepend(review);
+
+    document
+        .getElementById("reviewName").value = "";
+
+    document
+        .getElementById("reviewText")
+        .value = "";
+
+    selectedRating = 0;
+
+    stars.forEach(function(star) {
+        star.classList.remove("active");
+    });
+
+}
+
+
+/* ===== ZABEZPIECZENIE TEKSTU OPINII ===== */
+
+function escapeHTML(text) {
+
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+}
+
+</script>
+
+</body>
+</html>
+```
