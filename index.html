@@ -1,24 +1,15 @@
-Jasne. Wklej *całość poniżej* do pliku `index.html`. Jest podzielona na wyraźne sekcje, żeby później łatwo było coś znaleźć.
+Jasne. ❤️ Wklej *ten cały kod zamiast obecnego `index.html`*. Zostawiłem jedną dużą galerię *„Moje prace”*, telefon i Messenger.
 
 ```html
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-
-<!-- ==================== USTAWIENIA STRONY ==================== -->
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Agnieszka Łukasiewicz | Rzeźba w Dębie</title>
-
-<meta name="description"
-content="Agnieszka Łukasiewicz – rzeźby w drewnie, rysunki i malunki.">
+<title>Agnieszka Łukasiewicz | Rzeźba w drewnie</title>
 
 <style>
-
-/* ==================== RESET ==================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -31,36 +22,23 @@ html {
 
 body {
     font-family: Georgia, "Times New Roman", serif;
-    background: #f5eee4;
+    background: #f4ecdf;
     color: #3d2a1c;
     line-height: 1.6;
 }
-
-a {
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-
-/* ==================== NAWIGACJA ==================== */
 
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #24160e;
+    background: rgba(35, 22, 13, 0.98);
     box-shadow: 0 3px 15px rgba(0,0,0,.25);
 }
 
 .nav {
     max-width: 1200px;
     margin: auto;
-    min-height: 72px;
-    padding: 10px 20px;
+    padding: 15px 20px;
 
     display: flex;
     align-items: center;
@@ -68,8 +46,8 @@ header {
 }
 
 .logo {
-    color: #d9ae6c;
-    font-size: 23px;
+    color: #d8ad69;
+    font-size: 24px;
     font-weight: bold;
 }
 
@@ -82,91 +60,25 @@ header {
 }
 
 nav ul {
-    display: flex;
     list-style: none;
-    gap: 22px;
+    display: flex;
+    gap: 25px;
 }
 
 nav a {
     color: white;
-    font-size: 15px;
+    text-decoration: none;
 }
 
 nav a:hover {
-    color: #d9ae6c;
-}
-
-.menu-btn {
-    display: none;
-    border: 0;
-    background: none;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
+    color: #d8ad69;
 }
 
 
-/* ==================== PRZYCISKI ==================== */
-
-.btn {
-    display: inline-block;
-    padding: 14px 25px;
-    border-radius: 7px;
-    background: #9b6736;
-    color: white;
-    border: 0;
-    font-family: inherit;
-    font-size: 16px;
-    cursor: pointer;
-    transition: .25s;
-}
-
-.btn:hover {
-    background: #c28a4c;
-    transform: translateY(-2px);
-}
-
-.messenger {
-    background: #1685e5;
-}
-
-.messenger:hover {
-    background: #086bc0;
-}
-
-
-/* ==================== SEKCJE ==================== */
-
-section {
-    padding: 75px 20px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 40px;
-    color: #4b301d;
-    margin-bottom: 45px;
-}
-
-.section-title::after {
-    content: "";
-    display: block;
-    width: 70px;
-    height: 3px;
-    background: #a66e38;
-    margin: 15px auto;
-}
-
-
-/* ==================== STRONA GŁÓWNA ==================== */
+/* ==================== START ==================== */
 
 .hero {
-    min-height: 650px;
+    min-height: 600px;
 
     display: flex;
     align-items: center;
@@ -174,11 +86,11 @@ section {
     background:
         linear-gradient(
             90deg,
-            rgba(25,15,9,.90),
-            rgba(25,15,9,.55),
-            rgba(25,15,9,.25)
+            rgba(20,12,7,.92),
+            rgba(20,12,7,.55),
+            rgba(20,12,7,.25)
         ),
-        url("images/hero.jpg") center/cover no-repeat;
+        #302015;
 }
 
 .hero-content {
@@ -190,10 +102,10 @@ section {
 }
 
 .hero h1 {
-    max-width: 750px;
-    font-size: clamp(43px, 7vw, 78px);
+    max-width: 800px;
+    font-size: clamp(45px, 7vw, 80px);
     line-height: 1.05;
-    color: #f7ead7;
+    color: #f6ead7;
     margin-bottom: 25px;
 }
 
@@ -203,59 +115,58 @@ section {
     margin-bottom: 30px;
 }
 
-.hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 7px;
+    background: #9a6635;
+    color: white;
+    text-decoration: none;
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #c28a4c;
+}
+
+.messenger {
+    background: #1685e5;
+}
+
+.messenger:hover {
+    background: #086bc0;
 }
 
 
-/* ==================== O MNIE ==================== */
-
-.about {
-    background: #e6d4bc;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
-}
-
-.about h2 {
-    font-size: 38px;
-    margin-bottom: 20px;
-}
-
-.about p {
-    margin-bottom: 15px;
-}
-
-.about-photo img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 12px;
-}/* ==================== GALERIA ==================== */
+/* ==================== GALERIA ==================== */
 
 .gallery-section {
+    padding: 75px 20px;
     background: #302015;
 }
 
-.gallery-section .section-title {
-    color: #f5ead8;
+.container {
+    max-width: 1200px;
+    margin: auto;
 }
 
-.category {
-    margin-bottom: 70px;
-}
-
-.category-title {
-    color: #e1bd82;
+.section-title {
     text-align: center;
-    font-size: 32px;
-    margin-bottom: 25px;
+    color: #f5ead8;
+    font-size: 42px;
+    margin-bottom: 45px;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #a56e38;
+    margin: 15px auto;
 }
 
 .gallery {
@@ -268,149 +179,41 @@ section {
     overflow: hidden;
     border-radius: 10px;
     background: #21140c;
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
 }
 
 .gallery-item img {
+    display: block;
     width: 100%;
     height: 320px;
     object-fit: cover;
     transition: .4s;
 }
 
-.gallery-item:hover img {
+.gallery-item img:hover {
     transform: scale(1.04);
-}
-
-
-/* ==================== OPINIE ==================== */
-
-.reviews {
-    background: #fffaf3;
-}
-
-.review-intro {
-    text-align: center;
-    max-width: 650px;
-    margin: -25px auto 35px;
-}
-
-.review-form {
-    max-width: 700px;
-    margin: auto;
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 25px rgba(0,0,0,.08);
-}
-
-.form-group {
-    margin-bottom: 18px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 6px;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #cdb99f;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 16px;
-}
-
-textarea {
-    min-height: 130px;
-    resize: vertical;
-}
-
-.stars {
-    text-align: center;
-    margin: 15px 0 25px;
-}
-
-.star {
-    color: #ccc;
-    font-size: 38px;
-    cursor: pointer;
-}
-
-.star.active {
-    color: #d8a641;
-}
-
-.review-form .btn {
-    width: 100%;
-}
-
-.review-list {
-    max-width: 800px;
-    margin: 35px auto 0;
-}
-
-.review {
-    background: #f5eee4;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.review-stars {
-    color: #d8a641;
 }
 
 
 /* ==================== KONTAKT ==================== */
 
 .contact {
+    padding: 75px 20px;
     background: #2b1c12;
     color: white;
     text-align: center;
 }
 
-.contact .section-title {
-    color: white;
+.contact h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
 .phone {
     display: block;
     color: #e0b878;
     font-size: 25px;
-    margin: 15px 0 25px;
-}
-
-.contact-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-
-/* ==================== FORMULARZ WIADOMOŚCI ==================== */
-
-.message-box {
-    max-width: 700px;
-    margin: 45px auto 0;
-    padding: 30px;
-    background: white;
-    color: #3d2a1c;
-    border-radius: 12px;
-    text-align: left;
-}
-
-.message-box h3 {
-    text-align: center;
-    font-size: 27px;
-    margin-bottom: 25px;
-}
-
-.message-box .btn {
-    width: 100%;
+    margin: 20px 0 25px;
 }
 
 
@@ -421,86 +224,30 @@ footer {
     color: #cdbda9;
     text-align: center;
     padding: 25px;
-    font-size: 14px;
-}
-
-
-/* ==================== TABLET ==================== */
-
-@media (max-width: 850px) {
-
-    nav ul {
-        display: none;
-
-        position: absolute;
-        top: 72px;
-        left: 0;
-        right: 0;
-
-        background: #24160e;
-        flex-direction: column;
-        text-align: center;
-        gap: 0;
-        padding: 10px;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    nav li {
-        padding: 12px;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 
 /* ==================== TELEFON ==================== */
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
 
-    section {
-        padding: 55px 15px;
+    .nav {
+        padding: 12px 15px;
     }
 
-    .hero {
-        min-height: 570px;
+    nav ul {
+        gap: 12px;
+        font-size: 13px;
+    }.hero {
+        min-height: 520px;
     }
 
     .hero h1 {
-        font-size: 43px;
+        font-size: 45px;
     }
 
     .hero p {
         font-size: 18px;
-    }
-
-    .hero-buttons {
-        display: block;
-    }
-
-    .hero-buttons .btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-    }.section-title {
-        font-size: 31px;
-    }
-
-    .about h2 {
-        font-size: 31px;
     }
 
     .gallery {
@@ -511,31 +258,39 @@ footer {
         height: 300px;
     }
 
-    .contact-buttons {
-        display: block;
-    }
-
-    .contact-buttons .btn {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .message-box,
-    .review-form {
-        padding: 22px 17px;
+    .btn {
+        margin-bottom: 8px;
     }
 }
 
+@media (max-width: 480px) {
+
+    nav ul {
+        gap: 7px;
+        font-size: 11px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo small {
+        font-size: 8px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+}
 </style>
 </head>
 
 <body>
 
 
-<!-- ==================== NAWIGACJA ==================== -->
+<!-- ==================== MENU ==================== -->
 
 <header>
-
 <div class="nav">
 
 <a href="#start" class="logo">
@@ -543,27 +298,19 @@ Agnieszka Łukasiewicz
 <small>RZEŹBA • RYSUNKI • MALUNKI</small>
 </a>
 
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
-
 <nav>
-<ul id="menu">
-
-<li><a href="#o-mnie">O mnie</a></li>
-<li><a href="#rzezby">Rzeźby</a></li>
-<li><a href="#rysunki">Rysunki</a></li>
-<li><a href="#malunki">Malunki</a></li>
-<li><a href="#opinie">Opinie</a></li>
+<ul>
+<li><a href="#start">Start</a></li>
+<li><a href="#galeria">Moje prace</a></li>
 <li><a href="#kontakt">Kontakt</a></li>
-
 </ul>
 </nav>
 
 </div>
-
 </header>
 
 
-<!-- ==================== STRONA GŁÓWNA ==================== -->
+<!-- ==================== START ==================== -->
 
 <section class="hero" id="start">
 
@@ -576,9 +323,7 @@ Rzeźby w drewnie, rysunki i malunki.
 Zapraszam do obejrzenia moich prac.
 </p>
 
-<div class="hero-buttons">
-
-<a href="#rzezby" class="btn">
+<a href="#galeria" class="btn">
 Zobacz moje prace
 </a>
 
@@ -591,197 +336,112 @@ class="btn messenger">
 
 </div>
 
-</div>
-
 </section>
 
 
-<!-- ==================== O MNIE ==================== -->
+<!-- ==================== MOJE PRACE ==================== -->
 
-<section class="about" id="o-mnie">
-
-<div class="container">
-
-<div class="about-grid">
-
-<div>
-
-<h2>Agnieszka Łukasiewicz</h2>
-
-<p>
-Tworzę rzeźby w drewnie, rysunki i malunki.
-Każda praca powstaje z pasją, zaangażowaniem
-i dbałością o szczegóły.
-</p>
-
-<p>
-Zapraszam do obejrzenia moich prac.
-Jeżeli masz pytanie lub własny pomysł,
-napisz do mnie.
-</p>
-
-</div>
-
-<div class="about-photo">
-
-<img
-src="images/o-mnie.jpg"
-alt="Agnieszka Łukasiewicz">
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ==================== RZEŹBY ==================== -->
-
-<section class="gallery-section" id="rzezby">
+<section class="gallery-section" id="galeria">
 
 <div class="container">
 
-<h2 class="section-title">Rzeźby</h2>
+<h2 class="section-title">
+Moje prace
+</h2>
 
 <div class="gallery">
 
-<div class="gallery-item">
-<img src="images/rzezba1.jpg" alt="Rzeźba w drewnie">
-</div>
 
 <div class="gallery-item">
-<img src="images/rzezba2.jpg" alt="Rzeźba w drewnie">
+<img src="474624327_631644712675928_4174740781617561548_n.jpg"
+alt="Praca Agnieszki Łukasiewicz">
 </div>
 
 <div class="gallery-item">
-<img src="images/rzezba3.jpg" alt="Rzeźba w drewnie">
+<img src="480483206_650047970835602_1755299694685590784_n.jpg"
+alt="Praca Agnieszki Łukasiewicz">
 </div>
 
 <div class="gallery-item">
-<img src="images/rzezba4.jpg" alt="Rzeźba w drewnie">
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ==================== RYSUNKI ==================== -->
-
-<section class="gallery-section" id="rysunki">
-
-<div class="container">
-
-<h2 class="section-title">Rysunki</h2>
-
-<div class="gallery">
-
-<div class="gallery-item">
-<img src="images/rysunek1.jpg" alt="Rysunek">
+<img src="480598406_650048264168906_2804401212338591429_n.jpg"
+alt="Praca Agnieszki Łukasiewicz">
 </div>
 
 <div class="gallery-item">
-<img src="images/rysunek2.jpg" alt="Rysunek">
+<img src="480673500_650048407502225_2747864563319527074_n.jpg"
+alt="Praca Agnieszki Łukasiewicz">
 </div>
 
 <div class="gallery-item">
-<img src="images/rysunek3.jpg" alt="Rysunek">
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ==================== MALUNKI ==================== -->
-
-<section class="gallery-section" id="malunki">
-
-<div class="container">
-
-<h2 class="section-title">Malunki</h2>
-
-<div class="gallery">
-
-<div class="gallery-item">
-<img src="images/malunek1.jpg" alt="Malunek">
+<img src="480880694_652918960548503_5673049361983441363_n.jpg"
+alt="Praca Agnieszki Łukasiewicz">
 </div>
 
 <div class="gallery-item">
-<img src="images/malunek2.jpg" alt="Malunek">
+<img src="481209031_650047974168935_4691712188077933901_n.jpg"
+alt="Praca Agnieszki Łukasiewicz">
 </div>
 
 <div class="gallery-item">
-<img src="images/malunek3.jpg" alt="Malunek">
+<img src="481228723_650048314168901_1726876628475031991_n.jpg"
+alt="Praca Agnieszki Łukasiewicz">
 </div>
 
+<div class="gallery-item">
+<img src="481474681_657347920105607_3944137928123310028_n.jpg"
+alt="Praca Agnieszki Łukasiewicz">
 </div>
 
+<div class="gallery-item">
+<img src="481796746_657349166772149_3205915319468330988_n.jpg"
+alt="Praca Agnieszki Łukasiewicz">
 </div>
 
-</section>
-
-
-<!-- ==================== OPINIE ==================== -->
-
-<section class="reviews" id="opinie">
-
-<div class="container">
-
-<h2 class="section-title">Opinie klientów</h2>
-
-<p class="review-intro">
-Możesz zostawić swoją ocenę i krótką opinię.
-</p>
-
-<div class="review-form">
-  <h3>⭐ Dodaj opinię</h3>
-
-<div class="stars">
-
-<span class="star" data-rating="1">★</span>
-<span class="star" data-rating="2">★</span>
-<span class="star" data-rating="3">★</span>
-<span class="star" data-rating="4">★</span>
-<span class="star" data-rating="5">★</span>
-
+<div class="gallery-item">
+<img src="482025023_657190806787985_7770915702819550719_n.jpg"
+alt="Praca Agnieszki Łukasiewicz">
 </div>
 
-<div class="form-group">
-
-<label>Imię</label>
-
-<input
-type="text"
-id="reviewName"
-placeholder="Twoje imię">
-
+<div class="gallery-item">
+<img src="482054465_664325066074559_2635215696089296513_n.jpg"
+alt="Praca Agnieszki Łukasiewicz">
 </div>
 
-<div class="form-group">
-
-<label>Opinia</label>
-
-<textarea
-id="reviewText"
-placeholder="Napisz swoją opinię..."></textarea>
-
+<div class="gallery-item">
+<img src="482226554_664893406017725_3415736830533459965_n.jpg"
+alt="Praca Agnieszki Łukasiewicz">
 </div>
 
-<button class="btn" onclick="addReview()">
-Wyślij opinię
-</button>
-
+<div class="gallery-item">
+<img src="482241901_659546819885717_7250302109310704353_n.jpg"
+alt="Praca Agnieszki Łukasiewicz">
 </div>
 
-<div class="review-list" id="reviewList"></div>
+<div class="gallery-item">
+<img src="518349922_755262503647481_6810308356929135570_n.jpg"
+alt="Praca Agnieszki Łukasiewicz">
+</div>
 
+<div class="gallery-item">
+<img src="534260994_785371150636616_148248480236586569_n.jpg"
+alt="Praca Agnieszki Łukasiewicz">
+</div>
+
+<div class="gallery-item">
+<img src="627681740_918723680634695_8552144231508918325_n.jpg"
+alt="Praca Agnieszki Łukasiewicz">
+</div>
+
+<div class="gallery-item">
+<img src="792506788_1091735530000175_2792372539911673606_n.jpg"
+alt="Praca Agnies<div class="gallery-item">
+html
+<img src="793869182_1091735593333502_2164297527101525046_n.jpg">
+alt="Praca Agnieszki Łukasiewicz">
+</div>
+
+
+</div>
 </div>
 
 </section>
@@ -791,102 +451,22 @@ Wyślij opinię
 
 <section class="contact" id="kontakt">
 
-<div class="container">
-
-<h2 class="section-title">Kontakt</h2>
+<h2>Kontakt</h2>
 
 <p>
-Masz pytanie albo chcesz zamówić pracę?
+Masz pytanie dotyczące moich prac?
 </p>
 
-<a
-href="tel:+48795052820"
-class="phone">
+<a href="tel:+48795052820" class="phone">
 📞 795 052 820
-</a>
-
-<div class="contact-buttons">
-
-<a
-href="tel:+48795052820"
-class="btn">
-📞 Zadzwoń
 </a>
 
 <a
 href="https://m.me/AanastI666"
 target="_blank"
 class="btn messenger">
-💬 Messenger
+💬 Napisz na Messengerze
 </a>
-
-</div>
-
-
-<!-- ==================== WIADOMOŚĆ E-MAIL ==================== -->
-
-<div class="message-box">
-
-<h3>✉️ Napisz wiadomość</h3>
-
-<form
-action="https://formsubmit.co/lunakicia666@gmail.com"
-method="POST">
-
-<input
-type="hidden"
-name="_subject"
-value="Wiadomość ze strony Agnieszki Łukasiewicz">
-
-<input
-type="hidden"
-name="_captcha"
-value="false">
-
-<div class="form-group">
-
-<label>Imię</label>
-
-<input
-type="text"
-name="Imię"
-placeholder="Twoje imię"
-required>
-
-</div>
-
-<div class="form-group">
-
-<label>E-mail</label>
-
-<input
-type="email"
-name="Email"
-placeholder="Twój e-mail"
-required>
-
-</div>
-
-<div class="form-group">
-
-<label>Wiadomość</label>
-
-<textarea
-name="Wiadomość"
-placeholder="Napisz wiadomość..."
-required></textarea>
-
-</div>
-
-<button type="submit" class="btn">
-📩 Wyślij wiadomość
-</button>
-
-</form>
-
-</div>
-
-</div>
 
 </section>
 
@@ -897,133 +477,9 @@ required></textarea>
 
 © 2026 Agnieszka Łukasiewicz
 
-<br>
-
-Rzeźba w drewnie • Rysunki • Malunki
-
 </footer>
-
-
-<!-- ==================== JAVASCRIPT ==================== -->
-
-<script>
-
-/* ===== MENU TELEFONICZNE ===== */
-
-function toggleMenu() {
-
-    document
-        .getElementById("menu")
-        .classList.toggle("active");
-
-}
-
-
-/* ===== OCENY GWIAZDKAMI ===== */
-
-let selectedRating = 0;
-
-const stars = document.querySelectorAll(".star");
-
-stars.forEach(function(star) {
-
-    star.addEventListener("click", function() {
-
-        selectedRating =
-            Number(this.dataset.rating);
-
-        stars.forEach(function(s) {
-
-            const rating =
-                Number(s.dataset.rating);
-
-            if (rating <= selectedRating) {
-                s.classList.add("active");
-            } else {
-                s.classList.remove("active");
-            }
-
-        });
-
-    });
-
-});
-
-
-/* ===== DODAWANIE OPINII ===== */
-
-function addReview() {
-
-    const name =
-        document.getElementById("reviewName")
-        .value.trim();
-
-    const text =
-        document.getElementById("reviewText")
-        .value.trim();
-
-    if (!name || !text || selectedRating === 0) {
-
-        alert(
-            "Wpisz imię, opinię i wybierz liczbę gwiazdek."
-        );
-
-        return;
-    }
-
-    const review =
-        document.createElement("div");
-
-    review.className = "review";
-
-    review.innerHTML = `
-
-        <strong>${escapeHTML(name)}</strong>
-
-        <div class="review-stars">
-            ${"★".repeat(selectedRating)}
-            ${"☆".repeat(5 - selectedRating)}
-        </div>
-
-        <p>${escapeHTML(text)}</p>
-
-    `;
-
-    document
-        .getElementById("reviewList")
-        .prepend(review);
-
-    document
-        .getElementById("reviewName").value = "";
-
-    document
-        .getElementById("reviewText")
-        .value = "";
-
-    selectedRating = 0;
-
-    stars.forEach(function(star) {
-        star.classList.remove("active");
-    });
-
-}
-
-
-/* ===== ZABEZPIECZENIE TEKSTU OPINII ===== */
-
-function escapeHTML(text) {
-
-    return text
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-
-}
-
-</script>
 
 </body>
 </html>
-```
+```Agnieszki Łukasiewicz">
+</div>
